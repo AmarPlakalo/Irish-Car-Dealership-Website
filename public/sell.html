@@ -2,13 +2,13 @@
 <html>
 <header>
 <head>
-<title>Irish Car Dealership | Sell Car</title>
+<title class = "title-of-the-website-sell-car"></title>
 
-<link rel="stylesheet" href="sellcarsCSS.css">
+<link rel="stylesheet" href="homepageCSS.css">
 
 
 <ul class="first">
-<li><img class="HomeLogo" src ="logo vector(usable).png" alt "IDC logo"></img><h1>Irish Car Dealership</h1></li>
+<li><img class="HomeLogo" src ="logo vector(usable).png" alt "IDC logo"></img><h1 class = "website-heading-sell-car"></h1></li>
 </ul>
 
 <ul class = "second">
@@ -26,10 +26,10 @@
 </header>
 <br><br>
 
-<h2 class="headingInSellCar">Sell Car:</h2>
+<h2 class="headingInSellCar"></h2>
 <br><br>
-<form method="post" action = "/sell">
-<input list="make_of_cars_to_sell" name="make_of_cars_to_sell" placeholder="Make">
+<form method="post" action = "/sell" onsubmit="form_submitted_for_car_sale()">
+<input list="make_of_cars_to_sell" name="make_of_cars_to_sell" placeholder="Make" required>
 <datalist id="make_of_cars_to_sell">
 <option value="Audi">
 <option value="BMW">
@@ -37,7 +37,7 @@
 <option value="Hyundai">
 <option value="Skoda">
 </datalist><br><br>
-<input list="model_of_cars_to_sell" name="model_of_cars_to_sell" placeholder="Model">
+<input list="model_of_cars_to_sell" name="model_of_cars_to_sell" placeholder="Model" required>
 <datalist id="model_of_cars_to_sell"><br>
 <option value="Model 1">
 <option value="Model 2">
@@ -45,7 +45,7 @@
 <option value="Model 4">
 <option value="Model 5">
 </datalist><br><br>
-<input list="year_of_car_to_sell" name="year_of_car_to_sell" placeholder="Year">
+<input list="year_of_car_to_sell" name="year_of_car_to_sell" placeholder="Year" required>
 <datalist id="year_of_car_to_sell"><br>
 <option value="2020">
 <option value="2019">
@@ -59,33 +59,29 @@
 <option value="2011">
 <option value="2010">
 </datalist><br><br>
-<input list="transmission_of_car_for_sell" name="transmission_of_car_for_sell" placeholder="Transmission of Car">
+<input list="transmission_of_car_for_sell" name="transmission_of_car_for_sell" placeholder="Transmission of Car" required>
 <datalist id="transmission_of_car_for_sell"><br>
 <option value="Automatic">
 <option value="Manual">
 </datalist><br><br>
-<input type="text" placeholder="Mileage" name = "mileage">
-&nbsp&nbsp<input type="radio" id="KM" name="km_or_miles_for_sell" value="km">
-<label class="km_or_miles_for_sell" for="KM">KM</label>
-&nbsp&nbsp<input type="radio" id="Miles" name="km_or_miles_for_sell" value="Miles">
-<label class="km_or_miles_for_sell" for="Miles">Miles</label><br><br>
-<input type="text" placeholder="Price in €" name = "price"><br><br>
-<input type="text" placeholder="Engine Size" name="engine_size"><br><br>
-<input type="text" placeholder="Colour" name="colour"><br><br>
-<input type="text" placeholder="Number of Doors" name="number_of_doors"><br><br><br>
-<button type="submit">Add car for sale</button>
+<input type="text" placeholder="Mileage" name = "mileage" required><br><br>
+<input type="text" placeholder="Price in €" name = "price" required><br><br>
+<input type="text" placeholder="Engine Size" name="engine_size" required><br><br>
+<input type="text" placeholder="Colour" name="colour" required><br><br>
+<input type="text" placeholder="Number of Doors" name="number_of_doors" required><br><br><br>
+<button class = "class_for_submit_button_for_car_sale" name = "submit_car_for_sale_button" type="submit"></button>
 </form>
 <br><br><br><br><br>
 <br>
 <div class="footers_left_and_right">
 <footer class="footerOnTheRight">
-<p>Contact Details:</p><br>
-<p>Authors: The Irish Car Dealership Team</p>
-<p>Email: office@irishcardealership.com</p><br>
+<p class = "contact-details"></p><br>
+<p class = "authors"></p>
+<p class = "email"></p><br>
 </footer><br><br><br>
 
 <footer class="footerOnTheLeft">
-<p>Follow us on:</p><br>
+<p class = "follow-us"></p><br>
 <img class= "facebookLogo" src= "https://www.logolynx.com/images/logolynx/ad/ada9e5ecadd027df1014f327b1239742.jpeg" alt="facebook logo"></img>
 <img class = "twitterLogo" src = "https://logodix.com/logo/512378.png" alt = "twitter logo"></img>
 <img class = "youtubeLogo" src="https://bseenlive.com/wp-content/uploads/2018/03/Youtube-Logo-Small.png" alt="youtube logo"></img>
@@ -94,8 +90,29 @@
 </footer>
 </div>
 
+<script>
+function form_submitted_for_car_sale()
+{
+    window.alert("Car added for sale")
+}
+</script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	  $(".contact-details").text("Contact Details:");
+    $(".authors").text("Authors: The Irish Car Dealership Team");
+    $(".email").text("Email: office@irishcardealership.com");
+    $(".follow-us").text("Follow us on:");
+    $(".title-of-the-website-sell-car").text("Irish Car Dealership | Sell Car");
+    $(".website-heading-sell-car").text("Irish Car Dealership");
+    $(".headingInSellCar").text("Sell Car:");
+    $(".class_for_submit_button_for_car_sale").text("Add car for sale");
+	
+});
+
+</script>
+
 </body>
-
-
-
 </html>
