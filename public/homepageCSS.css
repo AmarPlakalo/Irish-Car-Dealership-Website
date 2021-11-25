@@ -93,13 +93,6 @@ body
 }
 
 
-h1
-{
-	font-size:30px;
-	font-family:Jazz LET, fantasy;
-	float:left;
-	color:white;
-}
 
 a
 {
@@ -134,12 +127,176 @@ h1
 	color:white;
 }
 
+.heading_of_user_dasboard
+{
+	margin-left:650px;
+	color:black;
+	font-family:Jazz LET, fantasy;
+	font-size:35px;
+}
+
+.car_dashboard_heading
+{
+	margin-left:650px;
+	color:black;
+	font-family:Jazz LET, fantasy;
+	font-size:35px;
+}
+
+.welcome_message_user_dashboard
+{
+	color:black;	
+	font-family:Georgia, serif;
+	margin-left:700px;
+}
+
+.car_dashboard_message
+{
+	color:black;	
+	font-family:Georgia, serif;
+	margin-left:560px;
+}
+.update_password_message
+{
+	color:black;	
+	font-family:Georgia, serif;
+	margin-left:560px;
+}
+.delete_account_message
+{
+	color:black;	
+	font-family:Georgia, serif;
+	margin-left:560px;	
+}
+
+
+button[name=log_out_button]
+{
+	background-color:blue;
+	color:white;
+	padding: 10px 35px;
+	border-radius: 10px;
+	margin-left:702px;
+}
+
+button[name=deleteAccountButton]
+{
+	background-color:blue;
+	color:white;
+	padding: 10px 35px;
+	border-radius: 10px;
+	margin-left:685px;
+}
+button[name=submitupdatedpassword]
+{
+	background-color:blue;
+	color:white;
+	padding: 10px 35px;
+	border-radius: 10px;
+	margin-left:665px;
+}
+button[name=viewCarFromRecords]
+{
+	background-color:blue;
+	color:white;
+	padding: 10px 35px;
+	border-radius: 10px;
+	margin-left:685px;
+}
+
+button[name=updateCarFromRecords]
+{
+	background-color:blue;
+	color:white;
+	padding: 10px 35px;
+	border-radius: 10px;
+	margin-left:685px;
+}
+
+button[name=deleteCarFromRecords]
+{
+	background-color:blue;
+	color:white;
+	padding: 10px 35px;
+	border-radius: 10px;
+	margin-left:685px;
+}
+
+button[name=update_car_info_button]
+{
+	background-color:blue;
+	color:white;
+	padding: 10px 35px;
+	border-radius: 10px;
+	margin-left:685px;
+}
+
+button[name=submit_car_for_sale_button]
+{
+	background-color:blue;
+	color:white;
+	padding: 10px 35px;
+	border-radius: 10px;
+	margin-left:665px;
+}
+
+button[name=submit_for_login]
+{
+	background-color:blue;
+	color:white;
+	padding: 10px 35px;
+	border-radius: 10px;
+	margin-left:690px;
+}
+
+button[name=register_form_submit_button]
+{
+	background-color:blue;
+	color:white;
+	padding: 10px 35px;
+	border-radius: 10px;
+	margin-left:690px;
+}
+
+
+input[name=updatePassword],input[type=password],input[name=Uname],input[name=username]
+{
+	background-color:#ade6e6;
+	border-radius: 10px;
+	padding: 8px 20px;
+	margin-left:644px;
+}
+
+.update_my_car_heading
+{
+	margin-left:630px;
+	color:black;
+	font-family:Jazz LET, fantasy;
+	font-size:35px;
+}
+
 a
 {
 	text-decoration:none;
 	color:white;
 	
 }
+
+a.car_dashboard_link
+{
+	color:blue;
+	
+}
+
+.car_dashboard_class
+{
+	color:black;
+	display:block;
+	text-align:center;
+	font-family:Georgia, serif;
+	
+}
+
 
 input[type=submit]
 {
@@ -150,7 +307,7 @@ input[type=submit]
 	margin-left:313px;
 }
 
-input[list=make_of_cars_for_buying_car],input[list=model_of_cars_for_buying_car],input[list=year_of_car_for_buying_car],input[type=text],input[list=transmission_of_car_buying_car]
+input[list=make_of_cars_for_buying_car],input[list=model_of_cars_for_buying_car],input[list=year_of_car_for_buying_car],input[list=transmission_of_car_buying_car],input[name=price_of_car_for_buying_car],input[name=colour_of_car_for_buying_car],input[name=number_of_doors_for_buying_car],input[name=engine_size_for_buying_car]
 {
 	background-color:#ade6e6;
 	border-radius: 10px;
@@ -165,4 +322,90 @@ input[list=make_of_cars_for_buying_car],input[list=model_of_cars_for_buying_car]
 	color:black;
 	font-family:Jazz LET, fantasy;
 	font-size:35px;
+}
+
+
+#restrictedaccessMessage
+{
+	text-align:center;
+}
+
+.headingInSellCar
+{
+	margin-left:650px;
+	color:black;
+	font-family:Jazz LET, fantasy;
+	font-size:35px;
+}
+
+input[list=make_of_cars_to_sell],input[list=model_of_cars_to_sell],input[list=year_of_car_to_sell],input[list=transmission_of_car_for_sell],input[name=mileage],input[name=price],input[name=colour],input[name=engine_size],input[name=number_of_doors]
+{
+	background-color:#ade6e6;
+	border-radius: 10px;
+	padding: 8px 20px;
+	margin-left:650px;
+}
+
+.loginHeading
+{
+	margin-left:650px;
+	color:black;
+	font-family:Jazz LET, fantasy;
+	font-size:35px;
+}
+
+.infoAboutLogin
+{
+	color:black;	
+	font-family:Georgia, serif;
+	margin-left:560px;
+}
+
+.usernameTag,.passwordTag
+{
+	color:black;
+	font-family:Georgia, serif;
+	margin-left:700px;
+}
+
+.promptToRegister
+{
+	color:black;
+	display:block;
+	text-align:center;
+	font-family:Georgia, serif;
+	
+}
+
+
+a.linkToRegister
+{
+	color:blue;
+}
+
+.registrationHeading
+{
+	margin-left:650px;
+	color:black;
+	font-family:Jazz LET, fantasy;
+	font-size:35px;
+}
+
+.infoAboutRegistration
+{
+	color:black;	
+	font-family:Georgia, serif;
+	margin-left:560px;
+}
+
+
+.registration
+{
+	float:left;
+}
+.usernameTagOnRegisterPage,.passwordTagOnRegisterPage
+{
+	color:black;
+	font-family:Georgia, serif;
+	margin-left:700px;
 }
