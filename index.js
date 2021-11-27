@@ -29,7 +29,7 @@ irish_car_dealership_database.connect(err => {
     }
     else
     {
-        console.log('Database successfully connected!');
+        console.log('Database connected');
     }
 });
 
