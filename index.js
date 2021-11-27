@@ -122,7 +122,8 @@ irish_car_dealership_website.get('/buyingcars',urlencodedParser,(req,res) => {
                     <th scope="col">Number of Doors</th>
                 </tr>
             </thead>
-            <tbody>`;
+            <tbody>
+            <a href="/" style=text-decoration:none;color:blue;>Go back to homepage</a>`;
   
 
             for(let i = 0; i < rows.length; i++) {
@@ -159,7 +160,6 @@ irish_car_dealership_website.post('/sell',urlencodedParser,function(req,res){
     let sql_insert = ('INSERT INTO cars(username_of_owner,make,model,year, transmission,mileage,price, engine_size,colour,number_of_doors) VALUES(?,?,?,?,?,?,?,?,?,?)');
     let values_from_form = [req.session.Uname,req.body.make_of_cars_to_sell,req.body.model_of_cars_to_sell,req.body.year_of_car_to_sell,req.body.transmission_of_car_for_sell,req.body.mileage,req.body.price,req.body.engine_size,req.body.colour,req.body.number_of_doors];
     irish_car_dealership_database.query(sql_insert,values_from_form);
-    console.log(req.body);
     res.redirect('/sell');
 });
 
@@ -176,30 +176,23 @@ irish_car_dealership_website.get('/userlogin',(req,res) => {
 });
 
 irish_car_dealership_website.post('/userlogin',urlencodedParser,async (req,res) => {
-    console.log(check_logged_in);
     if(check_logged_in == 0)
     {
         if(req.body.Uname && req.body.Password)
         {
-            console.log(req.body.Password);
             irish_car_dealership_database.query('SELECT * from profiles where username = ?',[req.body.Uname],async function(error, results, fields) {
-            console.log(results[0].password);
-            console.log(results.length);
             if(results.length == 1)
             {
                 if(await bcrypt.compare(req.body.Password,results[0].password))
                 {
                     req.session.loggedin = true;
-                    console.log(req.session.loggedin);
                     req.session.Uname = req.body.Uname;
                     check_logged_in = 1;
                     res.redirect('/userprofile');
-                    console.log('You have successfully logged in!!!!');
                 }
                 else
                 {
                     req.session.loggedin = false;
-                    console.log(req.session.loggedin);
                     req.session.Uname = req.body.Uname;
                     check_logged_in = 0;
                     res.redirect('/userlogin');
@@ -275,8 +268,6 @@ irish_car_dealership_website.post('/userprofile',urlencodedParser,(req,res) => {
 });
 
 irish_car_dealership_website.post('/updatepassword',urlencodedParser,async (req,res) => {
-    console.log(req.body.updatePassword);
-    console.log(req.session.Uname);
 
     const salt = await bcrypt.genSalt();
     const updateHashPassword = await bcrypt.hash(req.body.updatePassword,salt);
@@ -290,7 +281,6 @@ irish_car_dealership_website.post('/updatepassword',urlencodedParser,async (req,
 
 
 irish_car_dealership_website.post('/deleteuserprofile',urlencodedParser,(req,res) => {
-    console.log(req.session.Uname);
 
     let sql_to_delete_user_account = ('DELETE FROM profiles WHERE username = (?)');
     let username_to_delete = [req.session.Uname];
@@ -315,6 +305,7 @@ irish_car_dealership_website.post('/viewMyCar',(req,res) => {
             <table id="myCar" class="table">
             <thead>
                 <tr>
+                    <th scope="col">Car ID</th>
                     <th scope="col">Make</th>
                     <th scope="col">Model</th>
                     <th scope="col">Year</th>
@@ -330,7 +321,8 @@ irish_car_dealership_website.post('/viewMyCar',(req,res) => {
   
 
             for(let i = 0; i < rows.length; i++) {
-                myCar +=  `<tr><td>${rows[i].make}</td>`;
+                myCar +=  `<tr><td>${rows[i].car_id}</td>`;
+                myCar +=  `<td>${rows[i].make}</td>`;
                 myCar +=  `<td>${rows[i].model}</td>`;
                 myCar +=  `<td>${rows[i].year}</td>`;
                 myCar +=  `<td>${rows[i].transmission}</td>`;
@@ -346,20 +338,58 @@ irish_car_dealership_website.post('/viewMyCar',(req,res) => {
     });
 });
 
-irish_car_dealership_website.post('/deleteMyCar',(req,res) => {
+irish_car_dealership_website.post('/deleteMyCar',urlencodedParser,(req,res) => {
 
-    let sql_to_delete_car_from_records = ('DELETE FROM cars WHERE username_of_owner = (?)');
-    let usernames_car = [req.session.Uname];
+    let sql_to_delete_car_from_records = ('DELETE FROM cars WHERE username_of_owner = (?) AND car_id = (?)');
+    let usernames_car = [req.session.Uname,req.body.id_of_car];
     irish_car_dealership_database.query(sql_to_delete_car_from_records,usernames_car);
-    res.redirect('/buyingcars');
+    res.redirect('/viewMyCar');
 
 });
 
 irish_car_dealership_website.post('/updatemycar',urlencodedParser,(req,res) => {
 
-    let sql_to_update_car_from_records = ('UPDATE cars SET mileage = (?), price = (?), colour = (?)  WHERE username_of_owner = (?)');
-    let update_info = [req.body.mileage,req.body.price,req.body.colour,req.session.Uname];
+    let sql_to_update_car_from_records = ('UPDATE cars SET mileage = (?), price = (?), colour = (?)  WHERE username_of_owner = (?) AND car_id = (?)');
+    let update_info = [req.body.mileage,req.body.price,req.body.colour,req.session.Uname,req.body.id_of_car];
     irish_car_dealership_database.query(sql_to_update_car_from_records,update_info);
     res.redirect('/buyingcars');
+
+});
+irish_car_dealership_website.post('/searchforcar',urlencodedParser,(req,res) => {
+    irish_car_dealership_database.query('SELECT * from cars where make = (?) and model = (?)',[req.body.make_of_cars_for_buying_car,req.body.model_of_cars_for_buying_car], function(err, rows, fields) {
+
+        if(err)
+        {
+            throw err;
+        }
+        else
+        {
+            let searchcar = `
+            <table id="searchcar" class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Make</th>
+                    <th scope="col">Model</th>
+                    <th scope="col">Year</th>
+                    <th scope="col">Transmission</th>
+                    <th scope="col">Mileage</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Engine Size</th>
+                    <th scope="col">Colour</th>
+                    <th scope="col">Number of Doors</th>
+                </tr>
+            </thead>
+            <tbody>`;
+  
+
+            for(let i = 0; i < rows.length; i++) {
+                searchcar +=  `<tr><td>${rows[i].make}</td>`;
+                searchcar +=  `<td>${rows[i].model}</td></tr>`;
+             }
+            
+            res.send(searchcar);
+        }
+    });
+
 
 });
