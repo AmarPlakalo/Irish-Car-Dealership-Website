@@ -1,116 +1,79 @@
 <!DOCTYPE html>
 <html>
-<header>
 <head>
-
 <title class="title-of-the-website"></title>
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 <link rel="stylesheet" href="homepageCSS.css">
-
-<ul class="first">
-<li><img class="HomeLogo" src ="logo vector(usable).png" alt "IDC logo"></img> 
-<h1 class="website-heading-homepage"></h1></li>
-</ul>
-
-<ul class = "second">
-<br>
-<li><a href = "/userlogin"><b>Profile</b></a></li>
-<li><a href = "/sell"><b>Sell Car</b></a></li>
-<li><a href = "/buyingcars"><b>Cars</b></a></li>
-<li><a href = "/"><b>Home</b></a></li>
-</ul>
 </head>
+
 <body>
-<br><br><br>
-</header>
-<br><br>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container">
+<img class="logo_in_nav" src = "logo vector(usable).png"></img>
+  <a class="navbar-brand" href="/">Irish Car Dealership</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/buyingcars">Cars</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/sell">Sell Car</a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="/userlogin">Profile</a>
+      </li>
+    </ul>
+	</div>
+  </div>
+</nav>
 
-<div class="introToWebsite">
-<h2 class="headingInCarSearch"></h2>
-<br><br>
+<section>
+<div class="hero vh-100 d-flex align-items-center" id="home">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-7 mx-auto text-center">
+				<h1 class="display-4 text-white">Amazing new and used cars available now</h1>
+				<p class="text-white my-3">Enjoy viewing all the cars that we have to offer! You can also add your car for sale.
+				With excellent profile management options, you will having an excellent time using our website</p>
+				<a href="/buyingcars" class="btn me-2 btn-primary">Search for cars</a>
+			</div>
+		</div>
+	</div>
+</section>
 
-<form method="post" action="/searchforcar">
-<input list="make_of_cars_for_buying_car" name="make_of_cars_for_buying_car" placeholder="Make">
-<datalist id="make_of_cars_for_buying_car">
-<option value="Audi">
-<option value="BMW">
-<option value="Volkswagen">
-<option value="Hyundai">
-<option value="Skoda">
-</datalist>
-<input list="model_of_cars_for_buying_car" name="model_of_cars_for_buying_car" placeholder="Model">
-<datalist id="model_of_cars_for_buying_car"><br>
-<option value="A3">
-<option value="Model 2">
-<option value="Model 3">
-<option value="Model 4">
-<option value="Model 5">
-</datalist><br><br>
-<input list="year_of_car_for_buying_car" name="year_of_car_for_buying_car" placeholder="Year">
-<datalist id="year_of_car_for_buying_car"><br>
-<option value="2021">
-<option value="2020">
-<option value="2019">
-<option value="2018">
-<option value="2017">
-<option value="2016">
-<option value="2015">
-<option value="2014">
-<option value="2013">
-<option value="2012">
-<option value="2011">
-<option value="2010">
-<option value="2009">
-<option value="2008">
-<option value="2007">
-<option value="2006">
-<option value="2005">
-<option value="2004">
-<option value="2003">
-<option value="2002">
-<option value="2001">
-<option value="2000">
-<option value="1999">
-<option value="1998">
-</datalist>
-<input list="transmission_of_car_buying_car" name="transmission_of_car_buying_car" placeholder="Transmission of Car">
-<datalist id="transmission_of_car_buying_car"><br>
-<option value="Automatic">
-<option value="Manual">
-</datalist><br><br>
-<input type="text" name="price_of_car_for_buying_car" placeholder="Price in €">
-<input type="text" name="colour_of_car_for_buying_car" placeholder="Colour"><br><br>
-<input type="text" name="number_of_doors_for_buying_car" placeholder="Number of Doors">
-<input type="text" name="engine_size_for_buying_car" placeholder="Engine Size"><br><br><br>
-<input type="submit" value="Search">
-</form>
 
+
+<footer class="bg-dark text-white">
+<div class="footer-top">
+<div class = "container">
+<div class="row">
+<div class = "col-md-4">
+<img class="logo_in_footer" src="logo vector(usable).png">
 </div>
-<img class = "carPicture" src = "https://live.dealer-asset.co/ie1182/siteassets/Honda-Civic-Sedan-Gallery-Exterior-1.jpg" alt = "Picture of a car"></img>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br>
-<div class="footers_left_and_right">
-<footer class="footerOnTheRight">
-<p class = "contact-details"></p><br>
-<p class = "authors"></p>
-<p class = "email"></p><br>
-</footer><br><br><br>
-
-<footer class="footerOnTheLeft">
-<p class = "follow-us"></p><br>
-<img class= "facebookLogo" src= "https://www.logolynx.com/images/logolynx/ad/ada9e5ecadd027df1014f327b1239742.jpeg" alt="facebook logo"></img>
-<img class = "twitterLogo" src = "https://logodix.com/logo/512378.png" alt = "twitter logo"></img>
-<img class = "youtubeLogo" src="https://bseenlive.com/wp-content/uploads/2018/03/Youtube-Logo-Small.png" alt="youtube logo"></img>
-<img class = "instagramLogo" src="https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2016/05/instagram-logo.png" alt = "instagram logo"></img>
-
+<div class="col-md-4">
+<h5>Contact Details</h5>
+<ul>
+<li>Authors: ICD Team</li>
+<li>Email: office@irishcardealership.com</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 </footer>
-</div>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-	$(".contact-details").text("Contact Details:");
+    $(".contact-details").text("Contact Details:");
     $(".authors").text("Authors: The Irish Car Dealership Team");
     $(".email").text("Email: office@irishcardealership.com");
     $(".follow-us").text("Follow us on:");
@@ -121,8 +84,14 @@ $(document).ready(function(){
 });
 
 </script>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
 </body>
-
-
-
 </html>
