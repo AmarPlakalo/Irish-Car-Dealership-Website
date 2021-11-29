@@ -10,7 +10,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 <div class="container">
-<img class="logo_in_nav" src = "logo vector(usable).png"></img>
+<img class="logo_in_nav" src = "logo final.png"></img>
   <a class="navbar-brand" href="/">Irish Car Dealership</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -52,8 +52,23 @@
 <div>
 <form method="post" action="/deleteMyCar">
 <input type="text" placeholder="ID of car" name = "id_of_car"><br><br>
-<button class="delete_my_car_class_button type="submit" name="deleteCarFromRecords"></button><br><br>
+<button class="delete_my_car_class_button" type="submit" name="deleteCarFromRecords"></button><br><br>
 </form>
+</div>
+<div>
+<form method="post" action = "/viewpurchasecar">
+<p class="view_cart_class"><a href = "/viewpurchasecar" class="link_to_cart_to_view">View my cart</a></p>
+</form>
+</div>
+<div>
+  <form method="post" action = "/updatepurchasecar">
+  <p class="update_purchase_car_class"><a href = "updatemycart.html" class="link_to_update_purchase_car">Update my cart</a></p>
+  </form>
+</div>
+<div>
+  <form method="post" action = "/deletepurchasecar">
+    <button class="delete_purchase_car_class" type= "submit" name="deleteCarFromCartToPurchase">Delete car from my cart</button>
+    </form>
 </div>
 </div>
 
@@ -64,7 +79,7 @@
 <div class = "container">
 <div class="row">
 <div class = "col-md-4">
-<img class="logo_in_footer" src="logo vector(usable).png">
+<img class="logo_in_footer" src="logo final.png">
 </div>
 <div class="col-md-4">
 <h5>Contact Details</h5>
