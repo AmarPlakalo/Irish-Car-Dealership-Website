@@ -10,7 +10,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 <div class="container">
-<img class="logo_in_nav" src = "logo vector(usable).png"></img>
+<img class="logo_in_nav" src = "logo final.png"></img>
   <a class="navbar-brand" href="/">Irish Car Dealership</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -36,6 +36,7 @@
 
 <section>
 <h2 class="headingInSellCar"></h2>
+<div class="sell_car_div">
 <form method="post" action = "/sell" onsubmit="form_submitted_for_car_sale()">
 <input list="make_of_cars_to_sell" name="make_of_cars_to_sell" placeholder="Make" required>
 <datalist id="make_of_cars_to_sell">
@@ -66,6 +67,17 @@
 <option value="2012">
 <option value="2011">
 <option value="2010">
+<option value="2009">
+<option value="2008">
+<option value="2007">
+<option value="2006">
+<option value="2005">
+<option value="2004">
+<option value="2003">
+<option value="2002">
+<option value="2001">
+<option value="2000">
+<option value="1999">
 </datalist><br><br>
 <input list="transmission_of_car_for_sell" name="transmission_of_car_for_sell" placeholder="Transmission of Car" required>
 <datalist id="transmission_of_car_for_sell"><br>
@@ -79,6 +91,7 @@
 <input type="text" placeholder="Number of Doors" name="number_of_doors" required><br><br>
 <button class = "class_for_submit_button_for_car_sale" name = "submit_car_for_sale_button" type="submit"></button>
 </form>
+</div>
 </section>
 
 <div id = "footer_fixed_for_sell">
@@ -87,7 +100,7 @@
 <div class = "container">
 <div class="row">
 <div class = "col-md-4">
-<img class="logo_in_footer" src="logo vector(usable).png">
+<img class="logo_in_footer" src="logo final.png">
 </div>
 <div class="col-md-4">
 <h5>Contact Details</h5>
