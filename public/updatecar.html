@@ -10,7 +10,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 <div class="container">
-<img class="logo_in_nav" src = "logo vector(usable).png"></img>
+<img class="logo_in_nav" src = "logo final.png"></img>
   <a class="navbar-brand" href="/">Irish Car Dealership</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -35,8 +35,8 @@
 </nav>
 
 <br>
-<h2 class="update_my_car_heading"></h2>
-<br><br>
+<h2 class="update_my_car_heading"></h2><br><br>
+<div class="div_for_update_my_car_for_sale">
 <form method="post" action = "/updatemycar">
 <input type="text" placeholder="ID of car" name = "id_of_car"><br><br>
 <input type="text" placeholder="Mileage" name = "mileage"><br><br>
@@ -44,6 +44,7 @@
 <input type="text" placeholder="Colour" name="colour"><br><br>
 <button class = "update_info_about_car_button" name="update_car_info_button" type="submit"></button><br><br>
 </form>
+</div>
 
 <div id = "footer_fixed">
 <footer class="bg-dark text-white">
@@ -51,7 +52,7 @@
 <div class = "container">
 <div class="row">
 <div class = "col-md-4">
-<img class="logo_in_footer" src="logo vector(usable).png">
+<img class="logo_in_footer" src="logo final.png">
 </div>
 <div class="col-md-4">
 <h5>Contact Details</h5>
@@ -69,7 +70,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
-$(document).ready(function(){
+  $(document).ready(function(){
     $(".contact-details").text("Contact Details:");
     $(".authors").text("Authors: The Irish Car Dealership Team");
     $(".email").text("Email: office@irishcardealership.com");
