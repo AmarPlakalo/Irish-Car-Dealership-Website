@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title class="title-of-the-website-purchase-car"></title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<link rel="stylesheet" href="homepageCSS.css">
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container">
+<img class="logo_in_nav" src = "logo final.png"></img>
+  <a class="navbar-brand" href="/">Irish Car Dealership</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/buyingcars">Cars</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/sell">Sell Car</a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="/userlogin">Profile</a>
+      </li>
+    </ul>
+	</div>
+  </div>
+</nav>
+
+<br>
+<h2 class="purchase_car_heading"></h2><br><br>
+<div class = "div_for_purchase_car">
+<form method="post" action = "/purchasecar">
+<input type="text" placeholder="ID of car" name = "id_of_car"><br><br>
+<button class = "class_for_purchase_car_button" name="btn_purchase_car" type="submit"></button><br><br>
+</form>
+</div>
+<div id = "footer_fixed">
+<footer class="bg-dark text-white">
+<div class="footer-top">
+<div class = "container">
+<div class="row">
+<div class = "col-md-4">
+<img class="logo_in_footer" src="logo final.png">
+</div>
+<div class="col-md-4">
+<h5>Contact Details</h5>
+<ul>
+<li>Authors: ICD Team</li>
+<li>Email: office@irishcardealership.com</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	  $(".contact-details").text("Contact Details:");
+    $(".authors").text("Authors: The Irish Car Dealership Team");
+    $(".email").text("Email: office@irishcardealership.com");
+    $(".follow-us").text("Follow us on:");
+    $(".title-of-the-website-purchase-car").text("Irish Car Dealership | Purchase Car");
+    $(".website-heading-purchase-car").text("Irish Car Dealership");
+    $(".purchase_car_heading").text("Purchase Car:");
+    $(".class_for_purchase_car_button").text("Add to cart");
+	
+});
+
+</script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
