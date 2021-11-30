@@ -7,6 +7,7 @@ Lecturer’s Name:				Giancarlo Salton,
 Instructions: (How it works) 
 In order to make the website work, you must have mysql installed on your machine. Once you have it installed, create a user inside mysql and give the user a username and password. Do not forget the username and password because this will be used in the program. Another important thing to note is that you must give the user the permission to access the database. This is done by opening the mysql workbench and finding the connection that you are using.
 When you find it, click on the connection. Mysql workbench will prompt you to enter the root password. When you enter the password of the root (not the user password that you created), on the left hand side of the screen, click on users and privileges. Find the user that you are using and make sure that the authentication type is set to standard and that you enter the correct username. Then, go into the tab called administrative roles and select DBA. Then, hit apply.
+Note Pictures cant be shown in git. recommended download .pdf files to follow instructions.
 
 Go back into the mysql workbench and on the left side of the screen, click on schemas which is shown in the picture below:
 
