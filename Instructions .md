@@ -26,4 +26,4 @@ Type “localhost:3000” into the search bar of the user's preferred browser. T
 
 
 Purpose of the Web Development Project:
-Please go to Read_Report.md file thank you.
+Please go to Read_Intro.md file thank you.
