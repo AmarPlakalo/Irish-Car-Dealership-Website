@@ -35,42 +35,31 @@
 </nav>
 
 <br>
-<div class = "car_dashboard_div">
 <h2 class="car_dashboard_heading"></h1><br>
 <p class="car_dashboard_message"></p><br><br>
 
-<div>
 <form method="post" action="/viewMyCar">
 <button class="view_my_car_class_button" type="submit" name="viewCarFromRecords"></button>
 </form>
-</div><br><br>
-<div>
+<br><br>
+
 <form action="updatecar.html">
-<button class="update_my_car_class_button type="submit" name="updateCarFromRecords"></button>
+<button class="update_my_car_class_button" type="submit" name="updateCarFromRecords"></button>
 </form>
-</div><br><br>
-<div>
+<br><br>
 <form method="post" action="/deleteMyCar">
 <input type="text" placeholder="ID of car" name = "id_of_car"><br><br>
 <button class="delete_my_car_class_button" type="submit" name="deleteCarFromRecords"></button><br><br>
 </form>
-</div>
-<div>
 <form method="post" action = "/viewpurchasecar">
 <p class="view_cart_class"><a href = "/viewpurchasecar" class="link_to_cart_to_view">View my cart</a></p>
 </form>
-</div>
-<div>
   <form method="post" action = "/updatepurchasecar">
   <p class="update_purchase_car_class"><a href = "updatemycart.html" class="link_to_update_purchase_car">Update my cart</a></p>
   </form>
-</div>
-<div>
   <form method="post" action = "/deletepurchasecar">
     <button class="delete_purchase_car_class" type= "submit" name="deleteCarFromCartToPurchase">Delete car from my cart</button>
     </form>
-</div>
-</div>
 
 
 <div id = "footer_fixed">
