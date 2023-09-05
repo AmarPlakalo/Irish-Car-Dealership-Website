@@ -44,6 +44,6 @@ Used bcrypt to generate hashed passwords
 The reason we used it is because it stores hashed passwords into the database. This is important because if someone gains access to our database, they cannot steal information from us as the password is hashed. An important thing to note is that the users created in the sql file that was sent in the zip file will not have hashed passwords in the database because in order to hash them, they need to be created using the registration form on the website. If the user wants to hash them, they can just update the password of one of the three premade accounts and it will then be hashed.
 
 
-Conclusion:
+**Conclusion:**
 
 This project taught us how to work in a group setting and take notes and logs. It is very important to know how to work with a group of people because this is needed in a workplace setting. Also, this project made us learn node.js and how it interacts in a website. We found out how important it is for a website to have a backend service because every website needs a database to store important information. Finally, the project made us understand bootstrap and how it can be used in a clever way to make a well-designed website that attracts viewers.
