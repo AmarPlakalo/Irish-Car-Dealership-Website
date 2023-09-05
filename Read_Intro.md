@@ -13,6 +13,8 @@ Team Members:					  3
 **Jade Corbally**					C19352071,
 **Shahjhan Riaz**					D17129735
 
+**Demo:**
+https://youtu.be/yBoRHpYrHmo
 
 **Purpose of the Web Development Project:**
 The website allows the user to purchase a car or sell a car. In order for the user to purchase or sell a car, they must register an account and then log into the account. If the user wants to sell a car, they must enter information about the car they wish to sell and then click on the button that says “Add car for sale”. In the background, this will insert a row into the table called cars. This cars table holds the cars which the user can view. Whenever a car is put up for sale, it goes into this table. The profiles table deals with the user details, which are the username and password. Also, when the user registers, a row is inserted inside the profiles table. Then, when the user wants to login, the program checks whether the username and password that were inputted already exist in the table. If so, the user cannot register because another person already has an account with the same username and password. The last table we have is the purchase table which will contain the car_id that the user wishes to purchase and the username of the person so we can easily identify which user wants to purchase the car.
